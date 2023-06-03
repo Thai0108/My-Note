@@ -33,7 +33,6 @@ dependencies:
   snapping_sheet: ^3.1.0
   firebase_crashlytics: ^3.1.1
   firebase_core: ^2.10.0
-  google_maps_flutter: ^2.2.5
   http_parser: ^4.0.2
   firebase_messaging: ^14.6.1
 
