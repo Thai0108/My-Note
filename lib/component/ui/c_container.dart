@@ -20,17 +20,10 @@ class CContainer extends StatelessWidget {
       padding: padding,
       width: width,
       height: height,
-      margin: margin ??
-          EdgeInsets.symmetric(
-            vertical: .015.w,
-            horizontal: .03.w,
-          ),
+      margin: margin,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          BoxShadow(color: kColorShadow, blurRadius: 5, spreadRadius: 3),
-        ],
+        borderRadius: BorderRadius.circular(8),
       ),
       child: child,
     );

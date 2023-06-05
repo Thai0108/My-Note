@@ -36,7 +36,7 @@ class CTextField extends StatefulWidget {
     this.colorVisibility = Colors.black45,
     this.margin = EdgeInsets.zero,
     this.padding,
-    this.radius = 8,
+    this.radius = 20,
     this.textStyle,
     this.maxLength,
     this.listShadow,
@@ -84,7 +84,7 @@ class _PTextFieldState extends State<CTextField> {
   var _visibility = false;
   late final inputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(widget.radius),
-    borderSide: BorderSide(width: 1, color: Colors.grey.withOpacity(0.5)),
+    borderSide: BorderSide(width: 0, color: Colors.transparent),
   );
 
   @override
@@ -94,7 +94,7 @@ class _PTextFieldState extends State<CTextField> {
     focusNode = widget.focusNode ?? FocusNode();
     padding = widget.padding ?? const EdgeInsets.only(left: 8);
     margin = widget.margin;
-    _fontSize = (widget.textStyle?.fontSize == null ? 13.fs : widget.textStyle!.fontSize) ?? 13.fs;
+    _fontSize = (widget.textStyle?.fontSize == null ? 14.fs : widget.textStyle!.fontSize) ?? 14.fs;
 
     hintStyle = widget.hintStyle ??
         TextStyle(
@@ -239,19 +239,19 @@ class _PTextFieldState extends State<CTextField> {
           hintStyle: hintStyle ??
               TextStyle(
                 color: Colors.grey,
-                fontSize: 13.fs,
+                fontSize: 14.fs,
               ),
-          border: inputBorder,
+          border: InputBorder.none,
           enabledBorder: inputBorder,
           focusedBorder: inputBorder,
           errorBorder: InputBorder.none,
           focusedErrorBorder: InputBorder.none,
           disabledBorder: inputBorder.copyWith(
-            borderSide: BorderSide(
-              color: Colors.grey.withOpacity(0.1),
-              width: 1,
-            ),
-          ),
+              // borderSide: BorderSide(
+              //   color: Colors.grey.withOpacity(0.1),
+              //   width: 1,
+              // ),
+              ),
         ),
       ),
     );
